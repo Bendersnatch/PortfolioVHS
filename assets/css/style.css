@@ -7,10 +7,10 @@
 body, html {
   height: 100%;
   font-family: 'Courier New', monospace;
+  background-image: url('img/herbarium-vhs.jpg');
 }
 
 .hero {
-  background-image: url('/assets/img/herbarium-vhs.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
