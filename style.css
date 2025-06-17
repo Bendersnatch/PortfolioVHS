@@ -23,7 +23,7 @@ html, body {
   justify-content: center;
   align-items:top;
   position: center;
-  margin: 120px;
+  margin: 0px;
 }
 
 .hero::after {
@@ -57,5 +57,72 @@ html, body {
   }
   20%, 24%, 55% {
     opacity: 0.5;
+  }
+}
+
+.mobile-navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.mobile-menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.mobile-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff; /* Glow */
+}
+
+@media (min-width: 768px) {
+  .mobile-navbar {
+    display: none; /* nasconde il menu mobile */
+  }
+
+  .tv-container {
+    position: relative;
+    height: 100vh;
+  }
+
+  .tv-button {
+    position: absolute;
+    color: #fff;
+    padding: 1rem 2rem;
+    transform: skew(-10deg);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: flicker 3s infinite alternate;
+    text-shadow:     0 0 5px #fff,    0 0 10px rgb(36, 94, 174),    0 0 20px rgb(46, 180, 166),    0 0 40px rgb(16, 46, 146);
+    transition: all 0.3s ease-in-out;
+    -webkit-animation: flicker 3s infinite alternate;
+}
+
+  /* posizione personalizzata per ogni bottone */
+  #btn-portfolio {
+    top: 38%;
+    left: 56%;
+    text-shadow:
+    0 0 5px  #00ffd5,
+    0 0 10px #00ffd5,
+    0 0 20px #00ffd5,
+    0 0 40px #00ffd5;
+  }
+    #btn-contacts {
+    top: 72%;
+    left: 67%;
+    text-shadow:
+    0 0 5px  #00aaff,
+    0 0 10px #00aaff,
+    0 0 20px #00aaff,
+    0 0 40px #00aaff;
   }
 }
