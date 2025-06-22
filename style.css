@@ -138,6 +138,7 @@ body {
     text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
     transition: all 0.3s ease-in-out;
     -webkit-animation: flicker 2.8s infinite alternate;
+    z-index: 3;
   }
 
   /* posizione personalizzata per ogni bottone */
