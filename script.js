@@ -8,7 +8,7 @@ document.querySelectorAll("a").forEach((link) => {
 
       setTimeout(() => {
         window.location.href = destination;
-      }, 600); // durata della animazione
+      }, 400); // durata della animazione
     });
   }
 });
