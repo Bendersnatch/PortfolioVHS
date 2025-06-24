@@ -312,6 +312,9 @@ body.portfolio-page {
   .profile-img {
     display: none;
   }
+  .home-button {
+    display: none;
+  }
 }
 
 
