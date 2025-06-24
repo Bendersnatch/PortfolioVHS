@@ -1,76 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
-
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Orbitron" />
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" 
+    rel="stylesheet">
 
     <title>Portfolio</title>
-
 </head>
 
-
-
 <body class="portfolio-page">
-    <header class="mobile-navbar">
-        <nav>
-            <ul class="mobile-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contacts.html">Contatti</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <nav class="mobile-navbar">
+        <ul class="mobile-menu">
+            <li><a href="index.html">Home</a></li>
+            <!--<li><a href="portfolio.html" class="active">Portfolio</a></li>-->
+            <li><a href="contacts.html">Contatti</a></li>
+        </ul>
+    </nav>
     <section>
-
         <h1 class="neon-text-portfolio">Portfolio</h1>
-
     </section>
-
-
 
     <section class="skills-section">
-
-        <h2 class="section-title">Competenze Tecniche</h2>
-
+        <h2 class="section-title">Competenze tecniche: </h2>
+            <section class="profile-img">
+                <img src="assets/img/profile-img.jpg" alt="my image">
+            </section>
         <div class="skills-list">
-
             <div class="skill-item">
-
-                <img src="assets/icons/HTML5.svg" alt="HTML">
-
+                <img src="assets/icons/HTML5.svg" alt="HTML icon">
                 <span>HTML</span>
-
             </div>
-
             <div class="skill-item">
-
-                <img src="assets/icons/CSS.svg" alt="CSS">
-
+                <img src="assets/icons/CSS.svg" alt="CSS icon">
                 <span>CSS</span>
-
             </div>
-
         </div>
-
     </section>
 
-
-
-
-
-
-
 </body>
+<footer>
+    <section class="section-home">
+        <a href="index.html" class="home-button" id="btn-home">Home</a>
+    </section>
+</footer>
 
 </html>
