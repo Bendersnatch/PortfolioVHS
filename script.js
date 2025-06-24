@@ -8,7 +8,7 @@ document.querySelectorAll("a").forEach((link) => {
 
       setTimeout(() => {
         window.location.href = destination;
-      }, 600); // tempo in ms uguale alla durata della tua animazione
+      }, 600); // durata della animazione
     });
   }
 });
