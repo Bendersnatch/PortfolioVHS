@@ -6,7 +6,7 @@
 
 html,
 body {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   height: 100%;
   margin: 0;
   background-image: url('assets/img/herbarium-vhs.jpg');
@@ -14,7 +14,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Courier New', monospace;
 }
 
 .hero {
@@ -29,7 +28,7 @@ body {
 }
 
 .hero::after {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   content: '';
   position: absolute;
   top: 0;
@@ -48,7 +47,7 @@ body {
 }
 
 .neon-text {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   font-size: 3rem;
   color: #fff;
   text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
@@ -76,7 +75,7 @@ body {
 }
 
 .mobile-navbar {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   position: sticky;
   top: 0;
   background: rgba(79, 79, 79, 0.8);
@@ -85,13 +84,14 @@ body {
 }
 
 .mobile-menu {
+  font-family: "Quantico", sans-serif;;
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
 
 .mobile-menu a {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   color: #fff;
   text-decoration: none;
   font-weight: bold;
@@ -100,10 +100,11 @@ body {
   /* Glow */
 }
 
+/* nasconde il menu mobile */
 @media (min-width: 768px) {
   .mobile-navbar {
+    font-family: "Quantico", sans-serif;;
     display: none;
-    /* nasconde il menu mobile */
   }
 
   .tv-container {
@@ -112,7 +113,7 @@ body {
   }
 
   .tv-button {
-    font-family: Orbitron;
+    font-family: "Quantico", sans-serif;
     position: absolute;
     color: #fff;
     padding: 1rem 2rem;
@@ -125,7 +126,7 @@ body {
   }
 
   #btn-contacts {
-    font-family: Orbitron;
+    font-family: "Quantico", sans-serif;
     animation: flicker 2.2s infinite alternate;
     text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
     transition: all 0.3s ease-in-out;
@@ -133,19 +134,18 @@ body {
   }
 
   #btn-portfolio {
-    font-family: Orbitron;
+    font-family: "Quantico", sans-serif;
     animation: flicker 3s infinite alternate;
     text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
     transition: all 0.3s ease-in-out;
     -webkit-animation: flicker 2.8s infinite alternate;
-    z-index: 3;
   }
 
   /* posizione personalizzata per ogni bottone */
   #btn-portfolio {
     top: 38%;
     left: 57%;
-    font-family: Orbitron;
+    font-family: "Quantico", sans-serif;
     text-shadow:
       0 0 5px #00aaff,
       0 0 10px #00aaff,
@@ -156,7 +156,7 @@ body {
   #btn-contacts {
     top: 72%;
     left: 68%;
-    font-family: Orbitron;
+    font-family: "Quantico", sans-serif;
     text-shadow:
       0 0 5px #00ffd5,
       0 0 10px #00ffd5,
@@ -174,17 +174,16 @@ body.portfolio-page {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: Orbitron, monospace;
+  font-family: "Quantico", sans-serif;
 }
 
 .neon-text-portfolio {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   position: relative;
   z-index: 2;
   text-align: center;
   padding: 20px;
   font-size: 3rem;
-  font-family: Orbitron;
   color: #fff;
   text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118), 0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
   animation: flicker 2.5s infinite alternate;
@@ -193,22 +192,22 @@ body.portfolio-page {
 
 .skills-section {
   text-align: right;
-  padding: 1rem 1rem;
+  padding: 3rem 3rem;
   color: white;
 }
 
 .section-title {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   padding-top: 55px;
   padding-bottom: 5px;
   font-size: 2.5rem;
-  font-family: Orbitron;
   text-shadow: 0 0 10px #00ffff;
   animation: flicker 3.2s infinite alternate;
   -webkit-animation: flicker 3.2s infinite alternate;
 }
 
 .skills-list {
+  font-family: "Quantico", sans-serif;
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -217,13 +216,13 @@ body.portfolio-page {
 }
 
 .skill-item {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   display: flex;
   flex: 1 1 100px;
   flex-direction: column;
   align-items: center;
-  width: 80px;
-  max-width: 130px;
+  width: 90px;
+  max-width: 150px;
   font-size: clamp(2rem, 5vw, 3rem);
   padding: 1rem;
   background-color: rgba(242, 238, 238, 0.3);
@@ -258,14 +257,10 @@ body.portfolio-page {
   font-size: 1.5rem;
   z-index: 3;
   pointer-events: auto;
-  -webkit-transform: ;
-  -moz-transform: ;
-  -ms-transform: ;
-  -o-transform: ;
 }
 
 #btn-home {
-  font-family: Orbitron;
+  font-family: "Quantico", sans-serif;
   bottom: 15%;
   left: 20%;
   font-size: 35px;
@@ -278,6 +273,47 @@ body.portfolio-page {
   text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff;
 }
 
+/* immagine profilo */
+/* effetto flottante */
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(4deg); -webkit-transform: translateY(0px) rotate(4deg); -moz-transform: translateY(0px) rotate(4deg); -ms-transform: translateY(0px) rotate(4deg); -o-transform: translateY(0px) rotate(4deg); }
+  50%  { transform: translateY(-8px) rotate(4deg); -webkit-transform: translateY(-8px) rotate(4deg); -moz-transform: translateY(-8px) rotate(4deg); -ms-transform: translateY(-8px) rotate(4deg); -o-transform: translateY(-8px) rotate(4deg); }
+  100% { transform: translateY(0px) rotate(4deg); -webkit-transform: translateY(0px) rotate(4deg); -moz-transform: translateY(0px) rotate(4deg); -ms-transform: translateY(0px) rotate(4deg); -o-transform: translateY(0px) rotate(4deg); }
+}
+.profile-img {
+  position:absolute;
+  top: 1rem;
+  right: 8rem;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-img img {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: rotate(5deg);
+  border: 3px solid #00ffff;
+  animation: float 4s ease-in-out infinite;
+  -webkit-animation: float 4s ease-in-out infinite;
+}
+
+/* media query portfolio */
+
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-img {
+    display: none;
+  }
+}
+
 
 /* contacts stile */
 body.contacts-page {
@@ -288,14 +324,50 @@ body.contacts-page {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Courier New', monospace;
+  font-family: "Quantico", sans-serif;
 }
 
 .neon-text-contacts {
   padding: 10px;
   font-size: 3rem;
+  font-family: "Quantico", sans-serif;
   color: #fff;
   text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181), 0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
   animation: flicker 2.5s infinite alternate;
   -webkit-animation: flicker 2.5s infinite alternate;
 }
+
+/* mobile glitch effect */
+@keyframes glitch-out {
+  0% {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  20% {
+    transform: skewX(5deg);
+    filter: contrast(1.2) brightness(1.2);
+  }
+  40% {
+    transform: skewX(-5deg) scale(1.05);
+    filter: contrast(0.8) brightness(0.8);
+  }
+  60% {
+    transform: skewX(10deg);
+    filter: hue-rotate(20deg);
+  }
+  80% {
+    transform: scale(0.9) skewX(-10deg);
+    filter: hue-rotate(-20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(5px);
+  }
+}
+
+.glitch-transition {
+  animation: glitch-out 0.6s forwards;
+}
+
