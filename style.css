@@ -354,6 +354,7 @@ body.contacts-page {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  z-index: 2;
 }
 
 .neon-text-contacts {
