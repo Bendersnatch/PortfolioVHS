@@ -177,10 +177,9 @@ body.portfolio-page {
 
 main.main-portfolio {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto;
-  gap: 5px;
-  ;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
 }
 
 main .neon-text-portfolio {
@@ -200,7 +199,7 @@ main .profile-img {
 }
 
 main .skills-section {
-  grid-column: 2/4;
+  grid-column: 3/4;
   grid-row: 2;
   padding: 10px;
   bottom: 20%;
@@ -241,13 +240,32 @@ main .skills-section {
   color: white;
 }
 
-.section-title {
-  padding-top: 55px;
-  padding-bottom: 5px;
-  font-size: 2.5rem;
-  text-shadow: 0 0 10px #00ffff;
+.skills-toggle {
+  justify-content: right;
+  max-height: 250px;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
+  margin-bottom: 1rem;
   -webkit-animation: flicker 3.2s infinite alternate;
   animation: flicker 3.2s infinite alternate;
+  z-index: 3;
+}
+
+.skills-toggle:hover {
+  box-shadow: 0 0 10px #00ffcc;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.skills-section {
+  display: block; 
 }
 
 .skills-list {
@@ -359,41 +377,78 @@ main .skills-section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: rotate(5deg);
+  transform: rotate(6deg);
   border: 3px solid #00ffff;
   -webkit-animation: float 4s ease-in-out infinite;
   animation: float 4s ease-in-out infinite;
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
 }
-
-/* media query portfolio */
-
-@media (max-width: 768px) {
-  .skills-section {
-    grid-column: auto;
+ 
+/* Mobile*/
+@media (max-width: 700px) {
+  .skills-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 5px #00ffcc;
+    margin-bottom: 1rem;
+}
+  
+  .skills-list {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
+  }
+
+  .skills-list.show {
+  display: 500px; 
+  }
+
+
+  .skill-item {
+    width: 60px;
+    font-size: 0.9rem;
+  }
+
+  .skill-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skills-section {
+    /*text-align: center;
+    padding: 1rem;*/
+    display: block;
+  }
+
+  .skills-list.show {
+    display: flex;
+  }
+
+  #btn-home {
+    display: none;
   }
 
   .profile-img {
     display: none;
   }
 
-  .skill-item:hover {
-    transform: scale(1.1);
-  }
-
-  .skill-item img {
-    grid-column: auto;
-    display: grid;
-    width: 20px;
-    height: 20px;
-    margin-bottom: 0.2rem;
-    filter: drop-shadow(0 0 5px #00ffff);
-  }
-
-  #btn-home {
-    display: none;
-  }
 }
+
 
 
 /* contacts style */
