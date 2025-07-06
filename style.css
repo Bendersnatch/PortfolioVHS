@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -242,9 +244,6 @@ main .skills-section {
   text-shadow: 0 0 5px #00ffcc;
   margin-bottom: 1rem;
   appearance: none;
-  -webkit-animation: flicker 3.2s infinite alternate;
-  animation: flicker 3.2s infinite alternate;
-  z-index: 3;
 }
 
 /* nasconde la spunta di checkbox*/
@@ -381,13 +380,16 @@ input[type="checkbox"] {
 }
 
 /* Mobile portfolio*/
-@media (max-width: 700px) {
+@media (max-width: 680px) {
   :root {
     --bar-width: 60px;
     --bar-height: 8px;
     --hamburger-gap: 6px;
     --foreground: #00ffcc;
     --background: rgba(255, 255, 255, 0.2);
+    --hamburger-margin-right: 30px;
+    --hamburger-margin-top: 350px;
+    --animation-timing: 200ms ease-in-out;
   }
 
   .skills-hamburger {
@@ -395,6 +397,11 @@ input[type="checkbox"] {
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: max-content;
+    position: absolute;
+    right: var(--hamburger-margin-right);
+    top: var(--hamburger-margin-top);
+    z-index: 1;
+    cursor: pointer;
   }
 
   .skills-hamburger::before,
@@ -405,46 +412,52 @@ input[type="checkbox"] {
     height: var(--bar-height);
     background-color: var(--foreground);
     display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #fff;
     max-width: fit-content;
     max-height: fit-content;
     border-radius: 9999px;
     box-shadow: 0 0 5px #00ffcc;
+    transition: opacity var(--animation-timing), width var(--animation-timing);
+    -webkit-transition: opacity var(--animation-timing), width var(--animation-timing);
+    -moz-transition: opacity var(--animation-timing), width var(--animation-timing);
+    -ms-transition: opacity var(--animation-timing), width var(--animation-timing);
+    -o-transition: opacity var(--animation-timing), width var(--animation-timing);
   }
 
-  .skills-hamburger input {
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;
+  .skills-checkbox {
+    display: none;
+  }
+
+  .skills-checkbox:checked~.skills-list {
+    max-height: 300px;
   }
 
   .skills-list {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.4s ease;
+    transition: max-height 0.6s ease;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
+    -webkit-transition: max-height 0.6s ease;
+    -moz-transition: max-height 0.6s ease;
+    -ms-transition: max-height 0.6s ease;
+    -o-transition: max-height 0.6s ease;
   }
 
   .skills-list.show {
-    display: 500px;
+    display: 400px;
   }
 
 
   .skill-item {
-    width: 60px;
-    font-size: 0.9rem;
+    width: 25px;
+    font-size: 0.7rem;
   }
 
   .skill-item img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
   }
 
   .skills-section {
