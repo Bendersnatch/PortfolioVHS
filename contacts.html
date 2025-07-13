@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Contatti</title>
-</head>
-<header class="mobile-navbar">
+  </head>
+  <header class="mobile-navbar">
     <nav>
-        <ul class="mobile-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">About me</a></li>
-        </ul>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">About me</a></li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<body class="contacts-page">
+  <body class="contacts-page">
     <main class="tv-container">
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="neon-text-contacts">Miei contatti:</h1>
+      <section>
+        <div class="hero-content">
+          <h1 class="neon-text-contacts">Miei contatti:</h1>
+        </div>
+        <div class="hero">
+          <form>
+            <div class="input-group">
+              <input type="text" id="name" required />
+              <label for="name">Your name</label>
             </div>
-        </section>
+            <div class="input-group">
+              <input type="text" id="number" required />
+              <label for="number">Your number</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="email" required />
+              <label for="email">E-mail</label>
+            </div>
+            <div class="input-group">
+              <textarea id="message" rows="8"></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </section>
     </main>
-</body>
-
-
+  </body>
 </html>
