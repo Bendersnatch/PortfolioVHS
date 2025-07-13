@@ -530,7 +530,7 @@ input[type="checkbox"] {
 body.contacts-page {
   margin: 0;
   height: 100vh;
-  overflow: hidden;
+  overflow: scroll;
   background-image: url('assets/img/sea.png');
   background-size: cover;
   background-position: center;
@@ -540,7 +540,7 @@ body.contacts-page {
 }
 
 .neon-text-contacts {
-  padding: 10px;
+  padding-bottom: 35px;
   font-size: 3rem;
   font-family: "Quantico", sans-serif;
   color: #fff;
@@ -548,6 +548,22 @@ body.contacts-page {
   -webkit-animation: flicker 2.5s infinite alternate;
   animation: flicker 2.5s infinite alternate;
 }
+
+.hero.contacts-page {
+  width:100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+}
+
+
 
 /* mobile glitch effect */
 @keyframes glitch-out {
