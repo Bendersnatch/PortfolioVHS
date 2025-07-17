@@ -165,7 +165,7 @@ body.portfolio-page {
 
 main.main-portfolio {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 2rem;
 }
@@ -320,7 +320,7 @@ input[type="checkbox"] {
 
 #btn-home {
   bottom: 15%;
-  left: 20%;
+  left: 15%;
   font-size: 35px;
   text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e, 0 0 40px #c50e0e;
   -webkit-animation: flicker 2.9s infinite alternate;
@@ -387,7 +387,7 @@ input[type="checkbox"] {
 }
 
 /* Mobile portfolio*/
-@media (max-width: 680px) {
+@media (max-width: 700px) {
   :root {
     --bar-width: 60px;
     --bar-height: 8px;
@@ -399,39 +399,32 @@ input[type="checkbox"] {
     --animation-timing: 200ms ease-in-out;
   }
 
-  .main-portfolio {
+  main.main-portfolio {
     display: flex;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+
+  .text-box {
+    color: rgb(97, 34, 118);
+    display: inline-block;
+    max-width: 90%;
+    font-size: 15px;
     padding: 1rem;
+    background-color: rgba(174, 115, 201, 0.4);
+    border: solid 1px red;
+    border-radius: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-shadow: 0 0 5px rgb(183, 57, 143);
+    box-shadow: 0 0 10px rgb(183, 57, 143);
   }
 
-  .main-portfolio {
-    padding: 0.4rem;
-    gap: 0.4rem;
+  .content {
+    display: block;
+    width: 100%;
   }
-
-.text-box {
-  display: block; /* o flex con flex-direction: column */
-  width: 100%;
-  max-width: 90vw;
-  padding: 1rem;
-  box-sizing: border-box;
-  font-size: 0.9rem;
-  background-color: rgba(174, 115, 201, 0.619);
-  border: solid 1px red;
-  border-radius: 12px;
-  text-shadow: 0 0 5px rgb(183, 57, 143);
-  box-shadow: 0 0 10px rgb(183, 57, 143);
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.content {
-  display: block;
-  width: 100%;
-  line-height: 1.4;
-}
 
 
   h1.neon-text-portfolio {
@@ -440,7 +433,7 @@ input[type="checkbox"] {
   }
 
   .skills-hamburger {
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: var(--hamburger-gap);
     width: max-content;
@@ -527,31 +520,33 @@ input[type="checkbox"] {
 
 @media (max-width: 480px) {
   .main-portfolio {
-    padding: 0.4rem;
-    gap: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
   }
 
-.text-box {
-  display: block; /* o flex con flex-direction: column */
-  width: 100%;
-  max-width: 90vw;
-  padding: 1rem;
-  box-sizing: border-box;
-  font-size: 0.9rem;
-  background-color: rgba(174, 115, 201, 0.619);
-  border: solid 1px red;
-  border-radius: 12px;
-  text-shadow: 0 0 5px rgb(183, 57, 143);
-  box-shadow: 0 0 10px rgb(183, 57, 143);
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+  .text-box {
+    display: block;
+    width: 100%;
+    max-width: 90vw;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    background-color: rgba(174, 115, 201, 0.619);
+    border: solid 1px red;
+    border-radius: 12px;
+    text-shadow: 0 0 5px rgb(183, 57, 143);
+    box-shadow: 0 0 10px rgb(183, 57, 143);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
 
-.content {
-  display: block;
-  width: 100%;
-  line-height: 1.4;
-}
+  .content {
+    display: block;
+    width: 100%;
+    line-height: 1.4;
+  }
 
 
   .skills-section {
@@ -572,6 +567,10 @@ input[type="checkbox"] {
   .skill-item img {
     width: 15px;
     height: 15px;
+  }
+
+  #btn-home {
+    display: none;
   }
 }
 
@@ -601,12 +600,36 @@ body.contacts-page {
 }
 
 .hero.contacts-page {
-  width:100%;
+  width: 100%;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.contacts-icons {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.contacts-icons img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px rgb(201, 127, 226));
+  -webkit-filter: drop-shadow(0 0 5px rgb(201, 127, 226));
+}
+
+.contacts-icons a {
+  color: #f5ebc5;
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181), 0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
+  -webkit-animation: flicker 3s infinite alternate;
+  animation: flicker 3s infinite alternate;
+  text-decoration: none;
 }
 
 form {
@@ -619,7 +642,8 @@ form {
   position: relative;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   outline: 0;
@@ -657,11 +681,16 @@ input:focus~label,
 input:valid~label,
 textarea:focus~label,
 textarea:valid~label {
-top: -35px;
-font-size: 14px;
+  top: -35px;
+  font-size: 14px;
 }
 
-
+/* mobile contacts */
+@media (max-width: 1250px) {
+  #btn-home {
+    display: none;
+  }
+}
 
 /* mobile glitch effect */
 @keyframes glitch-out {
