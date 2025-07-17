@@ -399,32 +399,32 @@ input[type="checkbox"] {
     --animation-timing: 200ms ease-in-out;
   }
 
-  main.main-portfolio {
+main.main-portfolio {
     display: flex;
     flex-direction: column;
     gap: 30px;
     padding: 10px;
   }
 
-  .text-box {
-    color: rgb(97, 34, 118);
-    display: inline-block;
-    max-width: 90%;
-    font-size: 15px;
-    padding: 1rem;
-    background-color: rgba(174, 115, 201, 0.4);
-    border: solid 1px red;
-    border-radius: 12px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    text-shadow: 0 0 5px rgb(183, 57, 143);
-    box-shadow: 0 0 10px rgb(183, 57, 143);
-  }
+.text-box {
+  color: rgb(97, 34, 118);
+  display: inline-block;
+  max-width: 90%;
+  font-size: 15px;
+  padding: 1rem;
+  background-color: rgba(174, 115, 201, 0.4);
+  border: solid 1px red;
+  border-radius: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-shadow: 0 0 5px rgb(183, 57, 143);
+  box-shadow: 0 0 10px rgb(183, 57, 143);
+}
 
-  .content {
-    display: block;
-    width: 100%;
-  }
+.content {
+  display: block;
+  width: 100%;
+}
 
 
   h1.neon-text-portfolio {
@@ -526,27 +526,27 @@ input[type="checkbox"] {
     padding: 5px;
   }
 
-  .text-box {
-    display: block;
-    width: 100%;
-    max-width: 90vw;
-    padding: 1rem;
-    box-sizing: border-box;
-    font-size: 0.9rem;
-    background-color: rgba(174, 115, 201, 0.619);
-    border: solid 1px red;
-    border-radius: 12px;
-    text-shadow: 0 0 5px rgb(183, 57, 143);
-    box-shadow: 0 0 10px rgb(183, 57, 143);
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-  }
+.text-box {
+  display: block;
+  width: 100%;
+  max-width: 90vw;
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  background-color: rgba(174, 115, 201, 0.619);
+  border: solid 1px red;
+  border-radius: 12px;
+  text-shadow: 0 0 5px rgb(183, 57, 143);
+  box-shadow: 0 0 10px rgb(183, 57, 143);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
 
-  .content {
-    display: block;
-    width: 100%;
-    line-height: 1.4;
-  }
+.content {
+  display: block;
+  width: 100%;
+  line-height: 1.4;
+}
 
 
   .skills-section {
@@ -600,7 +600,7 @@ body.contacts-page {
 }
 
 .hero.contacts-page {
-  width: 100%;
+  width:100%;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
@@ -642,8 +642,7 @@ form {
   position: relative;
 }
 
-input,
-textarea {
+input, textarea {
   width: 100%;
   padding: 10px;
   outline: 0;
@@ -681,16 +680,17 @@ input:focus~label,
 input:valid~label,
 textarea:focus~label,
 textarea:valid~label {
-  top: -35px;
-  font-size: 14px;
+top: -35px;
+font-size: 14px;
 }
 
 /* mobile contacts */
-@media (max-width: 1250px) {
-  #btn-home {
+@media (max-width: 1250px){
+    #btn-home {
     display: none;
   }
 }
+
 
 /* mobile glitch effect */
 @keyframes glitch-out {
