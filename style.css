@@ -194,18 +194,18 @@ main .skills-section {
 }
 
 .text-box {
-  color: rgb(97, 34, 118);
+  color: rgb(217, 181, 230);
   display: inline-block;
   max-width: 90%;
-  font-size: 20px;
+  font-size: 16px;
   padding: 1rem;
-  background-color: rgba(174, 115, 201, 0.4);
+  background-color: rgba(164, 104, 191, 0.5);
   border: solid 1px red;
   border-radius: 12px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  text-shadow: 0 0 5px rgb(183, 57, 143);
-  box-shadow: 0 0 10px rgb(183, 57, 143);
+  text-shadow: 0 0 5px rgb(170, 67, 137);
+  box-shadow: 0 0 10px rgb(150, 46, 117);
 }
 
 .content {
@@ -402,15 +402,15 @@ input[type="checkbox"] {
 main.main-portfolio {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     padding: 10px;
   }
 
 .text-box {
-  color: rgb(97, 34, 118);
+  color: rgb(234, 221, 238);
   display: inline-block;
   max-width: 90%;
-  font-size: 15px;
+  font-size: 10px;
   padding: 1rem;
   background-color: rgba(174, 115, 201, 0.4);
   border: solid 1px red;
@@ -690,6 +690,7 @@ font-size: 14px;
     display: none;
   }
 }
+
 
 
 /* mobile glitch effect */
