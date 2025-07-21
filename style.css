@@ -9,7 +9,7 @@ body {
   font-family: "Quantico", sans-serif;
   height: 100%;
   margin: 0;
-  background-image: url('assets/img/herbarium-vhs.jpg');
+  background-image: url("assets/img/herbarium-vhs.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,13 +37,13 @@ body {
 .neon-text {
   font-size: 3rem;
   color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
+  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174),
+    0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
   -webkit-animation: flicker 1.8s infinite alternate;
   animation: flicker 1.8s infinite alternate;
 }
 
 @keyframes flicker {
-
   0%,
   18%,
   22%,
@@ -101,14 +101,16 @@ body {
 }
 
 #btn-contacts {
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
+  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174),
+    0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
   transition: all 0.3s ease-in-out;
   -webkit-animation: flicker 2.2s infinite alternate;
   animation: flicker 2.2s infinite alternate;
 }
 
 #btn-portfolio {
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174), 0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
+  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174),
+    0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
   transition: all 0.3s ease-in-out;
   -webkit-animation: flicker 2.8s infinite alternate;
   animation: flicker 3s infinite alternate;
@@ -118,20 +120,14 @@ body {
 #btn-portfolio {
   top: 38%;
   left: 56%;
-  text-shadow:
-    0 0 5px #00aaff,
-    0 0 10px #00aaff,
-    0 0 20px #00aaff,
+  text-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff, 0 0 20px #00aaff,
     0 0 40px #00aaff;
 }
 
 #btn-contacts {
   top: 72%;
   left: 68%;
-  text-shadow:
-    0 0 5px #00ffd5,
-    0 0 10px #00ffd5,
-    0 0 20px #00ffd5,
+  text-shadow: 0 0 5px #00ffd5, 0 0 10px #00ffd5, 0 0 20px #00ffd5,
     0 0 40px #00ffd5;
 }
 
@@ -143,7 +139,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   #btn-contacts,
   #btn-portfolio {
     display: none;
@@ -155,7 +150,7 @@ body.portfolio-page {
   margin: 0;
   height: 100vh;
   overflow: scroll;
-  background-image: url('assets/img/vhs.jpg');
+  background-image: url("assets/img/vhs.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -194,7 +189,7 @@ main .skills-section {
 }
 
 .text-box {
-  color: rgb(217, 181, 230);
+  color: #ede6eb;
   display: inline-block;
   max-width: 90%;
   font-size: 16px;
@@ -204,8 +199,8 @@ main .skills-section {
   border-radius: 12px;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  text-shadow: 0 0 5px rgb(170, 67, 137);
-  box-shadow: 0 0 10px rgb(150, 46, 117);
+  text-shadow: 0 0 5px #bb5e97;
+  box-shadow: 0 0 10px #7b528e;
 }
 
 .content {
@@ -220,7 +215,8 @@ main .skills-section {
   padding: 20px;
   font-size: 3rem;
   color: #fff;
-  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118), 0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118),
+    0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
   -webkit-animation: flicker 2.5s infinite alternate;
   animation: flicker 2.5s infinite alternate;
 }
@@ -322,7 +318,8 @@ input[type="checkbox"] {
   bottom: 15%;
   left: 15%;
   font-size: 35px;
-  text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e, 0 0 40px #c50e0e;
+  text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e,
+    0 0 40px #c50e0e;
   -webkit-animation: flicker 2.9s infinite alternate;
   animation: flicker 2.9s infinite alternate;
 }
@@ -399,33 +396,32 @@ input[type="checkbox"] {
     --animation-timing: 200ms ease-in-out;
   }
 
-main.main-portfolio {
+  main.main-portfolio {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 10px;
   }
 
-.text-box {
-  color: rgb(234, 221, 238);
-  display: inline-block;
-  max-width: 90%;
-  font-size: 10px;
-  padding: 1rem;
-  background-color: rgba(174, 115, 201, 0.4);
-  border: solid 1px red;
-  border-radius: 12px;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  text-shadow: 0 0 5px rgb(183, 57, 143);
-  box-shadow: 0 0 10px rgb(183, 57, 143);
-}
+  .text-box {
+    color: rgb(234, 221, 238);
+    display: inline-block;
+    max-width: 90%;
+    font-size: 10px;
+    padding: 1rem;
+    background-color: rgba(174, 115, 201, 0.4);
+    border: solid 1px red;
+    border-radius: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-shadow: 0 0 5px rgb(183, 57, 143);
+    box-shadow: 0 0 10px rgb(183, 57, 143);
+  }
 
-.content {
-  display: block;
-  width: 100%;
-}
-
+  .content {
+    display: block;
+    width: 100%;
+  }
 
   h1.neon-text-portfolio {
     font-size: 1.8rem;
@@ -456,16 +452,19 @@ main.main-portfolio {
     border-radius: 9999px;
     box-shadow: 0 0 5px #00ffcc;
     transition: opacity var(--animation-timing), width var(--animation-timing);
-    -webkit-transition: opacity var(--animation-timing), width var(--animation-timing);
-    -moz-transition: opacity var(--animation-timing), width var(--animation-timing);
-    -ms-transition: opacity var(--animation-timing), width var(--animation-timing);
-    -o-transition: opacity var(--animation-timing), width var(--animation-timing);
+    -webkit-transition: opacity var(--animation-timing),
+      width var(--animation-timing);
+    -moz-transition: opacity var(--animation-timing),
+      width var(--animation-timing);
+    -ms-transition: opacity var(--animation-timing),
+      width var(--animation-timing);
+    -o-transition: opacity var(--animation-timing),
+      width var(--animation-timing);
   }
 
   .skills-checkbox {
     display: none;
   }
-
 
   .skills-list {
     max-width: 100%;
@@ -482,7 +481,6 @@ main.main-portfolio {
   .skills-list.show {
     display: 400px;
   }
-
 
   .skill-item {
     width: 25px;
@@ -515,7 +513,6 @@ main.main-portfolio {
   #btn-home {
     display: none;
   }
-
 }
 
 @media (max-width: 480px) {
@@ -526,28 +523,27 @@ main.main-portfolio {
     padding: 5px;
   }
 
-.text-box {
-  display: block;
-  width: 100%;
-  max-width: 90vw;
-  padding: 1rem;
-  box-sizing: border-box;
-  font-size: 0.9rem;
-  background-color: rgba(174, 115, 201, 0.619);
-  border: solid 1px red;
-  border-radius: 12px;
-  text-shadow: 0 0 5px rgb(183, 57, 143);
-  box-shadow: 0 0 10px rgb(183, 57, 143);
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
+  .text-box {
+    display: block;
+    width: 100%;
+    max-width: 90vw;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+    background-color: rgba(174, 115, 201, 0.619);
+    border: solid 1px red;
+    border-radius: 12px;
+    text-shadow: 0 0 5px rgb(183, 57, 143);
+    box-shadow: 0 0 10px rgb(183, 57, 143);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
 
-.content {
-  display: block;
-  width: 100%;
-  line-height: 1.4;
-}
-
+  .content {
+    display: block;
+    width: 100%;
+    line-height: 1.4;
+  }
 
   .skills-section {
     width: 100%;
@@ -557,7 +553,6 @@ main.main-portfolio {
   .skills-list.show {
     display: 300px;
   }
-
 
   .skill-item {
     width: 25px;
@@ -574,14 +569,12 @@ main.main-portfolio {
   }
 }
 
-
-
 /* contacts style */
 body.contacts-page {
   margin: 0;
   height: 100vh;
   overflow: scroll;
-  background-image: url('assets/img/sea.png');
+  background-image: url("assets/img/sea.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -594,13 +587,14 @@ body.contacts-page {
   font-size: 3rem;
   font-family: "Quantico", sans-serif;
   color: #fff;
-  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181), 0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181),
+    0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
   -webkit-animation: flicker 2.5s infinite alternate;
   animation: flicker 2.5s infinite alternate;
 }
 
 .hero.contacts-page {
-  width:100%;
+  width: 100%;
   height: 100vh;
   box-sizing: border-box;
   display: flex;
@@ -626,7 +620,8 @@ body.contacts-page {
 
 .contacts-icons a {
   color: #f5ebc5;
-  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181), 0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181),
+    0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
   -webkit-animation: flicker 3s infinite alternate;
   animation: flicker 3s infinite alternate;
   text-decoration: none;
@@ -642,7 +637,8 @@ form {
   position: relative;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   outline: 0;
@@ -676,22 +672,20 @@ label {
   cursor: pointer;
 }
 
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label {
-top: -35px;
-font-size: 14px;
+input:focus ~ label,
+input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -35px;
+  font-size: 14px;
 }
 
 /* mobile contacts */
-@media (max-width: 1250px){
-    #btn-home {
+@media (max-width: 1250px) {
+  #btn-home {
     display: none;
   }
 }
-
-
 
 /* mobile glitch effect */
 @keyframes glitch-out {
