@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Contattami dal mio sito portfolio VHS. Collaborazioni e proposte sono benvenute."
+    />
+    <meta property="og:title" content="Contatti – PortfolioVHS" />
+    <meta
+      property="og:description"
+      content="Vuoi collaborare o conoscermi meglio? Scrivimi dal mio portfolio VHS!"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://bendersnatch.github.io/PortfolioVHS/contacts.html"
+    />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="PortfolioVHS" />
+    <title>Contatti</title>
+  </head>
+  <header class="mobile-navbar">
+    <nav>
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body class="contacts-page">
+    <main class="tv-container">
+      <section>
+        <div class="hero-content">
+          <h1 class="neon-text-contacts">I miei contatti:</h1>
+        </div>
+        <div class="contacts-icons">
+          <a href="https://www.linkedin.com/in/oleksandr-bazhenov-1814b414b/"
+            ><img src="assets/icons/Linkedin.svg" alt="Linkedin icon" />LinkedIn
+          </a>
+          <a href="https://github.com/Bendersnatch"
+            ><img src="assets/icons/Github.svg" alt="Github icon" /> GitHub</a
+          >
+        </div>
+        <div class="hero">
+          <form>
+            <div class="input-group">
+              <input type="text" id="name" required />
+              <label for="name">Your name:</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="number" required />
+              <label for="number">Your number:</label>
+            </div>
+            <div class="input-group">
+              <input type="text" id="email" required />
+              <label for="email">E-mail:</label>
+            </div>
+            <div class="input-group">
+              <textarea id="message" rows="8" required></textarea>
+              <label for="message">Message:</label>
+            </div>
+            <button type="submit" class="submit-button">SUBMIT</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <section class="section-home">
+      <a href="index.html" class="home-button" id="btn-home">Home</a>
+    </section>
+  </body>
+</html>
