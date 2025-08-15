@@ -1,17 +1,34 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Glitch transition sui link
-  document.querySelectorAll("a").forEach((link) => {
-    if (link.href && !link.href.startsWith("#")) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.body.classList.add("glitch-transition");
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
 
-        const destination = this.href;
-
-        setTimeout(() => {
-          window.location.href = destination;
-        }, 400);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-animate");
+        } else {
+          entry.target.classList.remove("show-animate");
+        }
       });
-    }
-  });
-})
+    },
+    { threshold: 0.5 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+});
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show-animate");
+        }, 150); // Ritardo di 100ms
+      } else {
+        entry.target.classList.remove("show-animate");
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
