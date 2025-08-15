@@ -9,7 +9,7 @@ body {
   font-family: "Quantico", sans-serif;
   height: 100%;
   margin: 0;
-  background-image: url("assets/img/herbarium-vhs.jpg");
+  background-image: linear-gradient(to bottom #78BCCF, #53B9FF);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,33 +17,9 @@ body {
   overflow: scroll;
 }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  position: center;
-  margin: 0px;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-}
-
-.neon-text {
-  font-size: 3rem;
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174),
-    0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
-  -webkit-animation: flicker 1.8s infinite alternate;
-  animation: flicker 1.8s infinite alternate;
-}
-
+/* animazioni */
 @keyframes flicker {
+
   0%,
   18%,
   22%,
@@ -61,6 +37,19 @@ body {
   }
 }
 
+@keyframes cursor {
+  50% {
+    border-color: transparent
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+/* mobile menu*/
 .mobile-navbar {
   position: sticky;
   top: 0;
@@ -83,53 +72,6 @@ body {
   text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
 }
 
-.tv-container {
-  position: flex;
-  height: 100vh;
-}
-
-.tv-button {
-  position: absolute;
-  color: #fff;
-  padding: 1rem 2rem;
-  transform: skew(-10deg);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  z-index: 3;
-  pointer-events: auto;
-}
-
-#btn-contacts {
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174),
-    0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
-  transition: all 0.3s ease-in-out;
-  -webkit-animation: flicker 2.2s infinite alternate;
-  animation: flicker 2.2s infinite alternate;
-}
-
-#btn-portfolio {
-  text-shadow: 0 0 5px #fff, 0 0 10px rgb(36, 94, 174),
-    0 0 20px rgb(46, 180, 166), 0 0 40px rgb(16, 46, 146);
-  transition: all 0.3s ease-in-out;
-  -webkit-animation: flicker 2.8s infinite alternate;
-  animation: flicker 3s infinite alternate;
-}
-
-/* posizione per ogni bottone home */
-#btn-portfolio {
-  top: 38%;
-  left: 56%;
-  text-shadow: 0 0 5px #00aaff, 0 0 10px #00aaff, 0 0 20px #00aaff,
-    0 0 40px #00aaff;
-}
-
-#btn-contacts {
-  top: 72%;
-  left: 68%;
-  text-shadow: 0 0 5px #00ffd5, 0 0 10px #00ffd5, 0 0 20px #00ffd5,
-    0 0 40px #00ffd5;
-}
 
 /* nasconde il menu mobile */
 @media (min-width: 768px) {
@@ -138,18 +80,9 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  #btn-contacts,
-  #btn-portfolio {
-    display: none;
-  }
-}
-
-/* portfolio style */
-body.portfolio-page {
+.portfolio-page {
   margin: 0;
   height: 100vh;
-  overflow: scroll;
   background-image: url("assets/img/vhs.jpg");
   background-size: cover;
   background-position: center;
@@ -175,17 +108,28 @@ main .about-me {
   padding: 10px;
 }
 
-main .profile-img {
-  grid-column: 2/4;
-  padding: 10px;
-  grid-row: 1;
+.typewriter {
+  display: inline-block;
+}
+
+.text-write {
+  font-size: 2em;
+  letter-spacing: 10px;
+  font-family: "Quantico", sans-serif;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fff;
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118), 0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
+  animation:
+    typing 7s infinite,
+    cursor .4s step-end infinite alternate;
 }
 
 main .skills-section {
-  grid-column: 4/4;
-  grid-row: 4;
+  grid-column: 1/2;
   padding: 10px;
-  bottom: 20%;
+  left: 10%;
 }
 
 .text-box {
@@ -215,43 +159,36 @@ main .skills-section {
   padding: 20px;
   font-size: 3rem;
   color: #fff;
-  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118),
-    0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
-  -webkit-animation: flicker 2.5s infinite alternate;
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118), 0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
   animation: flicker 2.5s infinite alternate;
 }
 
 .skills-section {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-column: 1/3;
+  justify-items: center;
+  gap: 1rem;
   text-align: right;
-  padding: 3rem 3rem;
+  padding: 3rem;
   color: white;
 }
 
 .skills-hamburger {
   position: relative;
-  display: grid;
-  grid-column: 3/4;
-  grid-row: 4;
-  padding: 10px;
+  display: flex;
+  grid-row: 1;
   bottom: 20%;
   justify-content: center;
   max-height: 90px;
-  width: 300px;
+  width: 30%;
   font-size: 2rem;
   color: white;
-  text-align: end;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   box-shadow: 0 0 5px #00ffcc;
   text-shadow: 0 0 5px #00ffcc;
-  margin-bottom: 1rem;
-  appearance: none;
-}
-
-/* nasconde la spunta di checkbox*/
-input[type="checkbox"] {
-  display: none;
 }
 
 .skills-hamburger:hover {
@@ -259,11 +196,13 @@ input[type="checkbox"] {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.skills-section {
-  display: block;
+/* nasconde la spunta di checkbox*/
+input[type=checkbox] {
+  display: none;
 }
 
 .skills-list {
+  grid-row: 2;
   margin: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -303,7 +242,7 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 
-.home-button {
+/*.home-button {
   position: absolute;
   color: #fff;
   padding: 1rem 2rem;
@@ -318,70 +257,98 @@ input[type="checkbox"] {
   bottom: 15%;
   left: 15%;
   font-size: 35px;
-  text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e,
-    0 0 40px #c50e0e;
-  -webkit-animation: flicker 2.9s infinite alternate;
+  text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e, 0 0 40px #c50e0e;
   animation: flicker 2.9s infinite alternate;
-}
+}*/
 
 .mobile-menu a.active {
   text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff;
 }
 
-/* immagine profilo effetto flottante*/
-@keyframes float {
-  0% {
-    transform: translateY(0px) rotate(4deg);
-    -webkit-transform: translateY(0px) rotate(4deg);
-    -moz-transform: translateY(0px) rotate(4deg);
-    -ms-transform: translateY(0px) rotate(4deg);
-    -o-transform: translateY(0px) rotate(4deg);
-  }
-
-  50% {
-    transform: translateY(-8px) rotate(4deg);
-    -webkit-transform: translateY(-8px) rotate(4deg);
-    -moz-transform: translateY(-8px) rotate(4deg);
-    -ms-transform: translateY(-8px) rotate(4deg);
-    -o-transform: translateY(-8px) rotate(4deg);
-  }
-
-  100% {
-    transform: translateY(0px) rotate(4deg);
-    -webkit-transform: translateY(0px) rotate(4deg);
-    -moz-transform: translateY(0px) rotate(4deg);
-    -ms-transform: translateY(0px) rotate(4deg);
-    -o-transform: translateY(0px) rotate(4deg);
-  }
+section {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.profile-img {
-  position: absolute;
-  padding: 20px;
-  top: 1rem;
-  right: 8rem;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
+#project-section {
+  background: #78BCCF;
+  background: linear-gradient(to bottom, rgba(120, 188, 207, 1) 0%, rgba(83, 185, 255, 1) 50%, rgba(123, 82, 142, 1) 100%);
 }
 
-.profile-img img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: rotate(6deg);
-  border: 3px solid #00ffff;
-  -webkit-animation: float 4s ease-in-out infinite;
-  animation: float 4s ease-in-out infinite;
-  -webkit-transform: rotate(6deg);
-  -moz-transform: rotate(6deg);
-  -ms-transform: rotate(6deg);
-  -o-transform: rotate(6deg);
+
+
+section .animate {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s
 }
+
+.sec-1 .animate {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.sec-1.show-animate .animate {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.sec-2 .animate {
+  -webkit-transform: translate(100%);
+  -moz-transform: translate(100%);
+  -ms-transform: translate(100%);
+  -o-transform: translate(100%);
+  transform: translate(100%);
+}
+
+.sec-2.show-animate .animate {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.sec-3 .animate {
+  -webkit-transform: scale(0.3);
+  -moz-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  -o-transform: scale(0.3);
+  transform: scale(0.3);
+}
+
+.sec-3.show-animate .animate {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+h2 {
+  font-size: 90px;
+  color: #c0c0c0;
+}
+
+p {
+  font-size: 35px;
+  color: #4da720;
+  font-weight: 600;
+}
+
 
 /* Mobile portfolio*/
 @media (max-width: 700px) {
@@ -430,59 +397,40 @@ input[type="checkbox"] {
 
   .skills-hamburger {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: var(--hamburger-gap);
+    width: -moz-max-content;
     width: max-content;
     position: static;
     margin: 1rem auto;
     right: var(--hamburger-margin-right);
     top: var(--hamburger-margin-top);
     z-index: 1;
-    cursor: pointer;
   }
 
-  .skills-hamburger input {
-    content: "";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: var(--foreground);
-    display: block;
-    max-width: fit-content;
-    max-height: fit-content;
-    border-radius: 9999px;
-    box-shadow: 0 0 5px #00ffcc;
-    transition: opacity var(--animation-timing), width var(--animation-timing);
-    -webkit-transition: opacity var(--animation-timing),
-      width var(--animation-timing);
-    -moz-transition: opacity var(--animation-timing),
-      width var(--animation-timing);
-    -ms-transition: opacity var(--animation-timing),
-      width var(--animation-timing);
-    -o-transition: opacity var(--animation-timing),
-      width var(--animation-timing);
-  }
-
-  .skills-checkbox {
+  .skills-checkbox,
+  .text-write {
     display: none;
   }
 
   .skills-list {
     max-width: 100%;
-    transition: max-height 0.6s ease;
     display: flex;
+    grid-row: 2;
+    flex-wrap: wrap;
+    margin: 1rem auto;
     justify-content: center;
     gap: 1rem;
+    transition: max-height 0.6s ease;
     -webkit-transition: max-height 0.6s ease;
     -moz-transition: max-height 0.6s ease;
     -ms-transition: max-height 0.6s ease;
     -o-transition: max-height 0.6s ease;
   }
 
-  .skills-list.show {
-    display: 400px;
-  }
-
   .skill-item {
+    display: inline-flex;
+    justify-items: center;
     width: 25px;
     font-size: 0.7rem;
   }
@@ -499,11 +447,6 @@ input[type="checkbox"] {
 
   .skills-list.show {
     display: flex;
-  }
-
-  .profile-img {
-    width: 100%;
-    display: none;
   }
 
   .about-me {
@@ -563,10 +506,6 @@ input[type="checkbox"] {
     width: 25px;
     height: 25px;
   }
-
-  #btn-home {
-    display: none;
-  }
 }
 
 /* contacts style */
@@ -587,9 +526,7 @@ body.contacts-page {
   font-size: 3rem;
   font-family: "Quantico", sans-serif;
   color: #fff;
-  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181),
-    0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
-  -webkit-animation: flicker 2.5s infinite alternate;
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181), 0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
   animation: flicker 2.5s infinite alternate;
 }
 
@@ -620,9 +557,7 @@ body.contacts-page {
 
 .contacts-icons a {
   color: #f5ebc5;
-  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181),
-    0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
-  -webkit-animation: flicker 3s infinite alternate;
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(148, 48, 181), 0 0 20px rgb(183, 141, 57), 0 0 40px rgb(16, 46, 146);
   animation: flicker 3s infinite alternate;
   text-decoration: none;
 }
@@ -672,10 +607,14 @@ label {
   cursor: pointer;
 }
 
-input:focus ~ label,
-input:valid ~ label,
-textarea:focus ~ label,
-textarea:valid ~ label {
+input:focus~label,
+input:valid~label {
+  top: -35px;
+  font-size: 14px;
+}
+
+textarea:focus~label,
+textarea:valid~label {
   top: -35px;
   font-size: 14px;
 }
@@ -725,4 +664,7 @@ textarea:valid ~ label {
 .glitch-transition {
   animation: glitch-out 0.6s forwards;
 }
+
+/*# sourceMappingURL=style.css.map */
+
 
