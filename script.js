@@ -1,33 +1,33 @@
-/*document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("a").forEach((link) => {
-    const rawHref = link.getAttribute("href");
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section");
 
-    if (rawHref && !rawHref.startsWith("#")) {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-        document.body.classList.add("glitch-transition");
-
-        const destination = this.href;
-
-        setTimeout(() => {
-          window.location.href = destination;
-        }, 600);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show-animate");
+        } else {
+          entry.target.classList.remove("show-animate");
+        }
       });
-    }
-  });
-});*/
-document.querySelectorAll("a, .nav-button").forEach((el) => {
-  const destination = el.tagName === "A" ? el.href : el.dataset.href;
+    },
+    { threshold: 0.5 }
+  );
 
-  if (destination && !destination.startsWith("#")) {
-    el.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.body.classList.add("glitch-transition");
-
-      setTimeout(() => {
-        window.location.href = destination;
-      }, 600); // tempo in ms uguale alla durata della tua animazione
-    });
-  }
+  sections.forEach((section) => observer.observe(section));
 });
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("show-animate");
+        }, 150); // Ritardo di 100ms
+      } else {
+        entry.target.classList.remove("show-animate");
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
