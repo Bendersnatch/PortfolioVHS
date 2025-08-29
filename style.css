@@ -9,6 +9,7 @@ body {
   font-family: "Quantico", sans-serif;
   height: 100%;
   margin: 0;
+  padding: 0;
   background-image: linear-gradient(to bottom, #78BCCF, #53B9FF);
   background-size: cover;
   background-position: center;
@@ -20,12 +21,14 @@ body {
 
 h2 {
   font-size: 90px;
-  color: #c0c0c0;
+  color: #fff;
+  text-shadow: 0 0 5px #00ffcc;
 }
 
 p {
   font-size: 35px;
-  color: #4da720;
+  color: #fff;
+  text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(169, 79, 199), 0 0 20px rgb(241, 108, 199), 0 0 40px rgb(54, 93, 221);
   font-weight: 600;
 }
 
@@ -380,9 +383,10 @@ section .animate {
 }
 
 .text-placeholder {
-  height: 16px;
-  border-radius: 4px;
-  margin: 0.5rem auto;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px #00ffcc;
+  text-shadow: 0 0 5px #00ffcc;
 }
 
 .title {
@@ -393,6 +397,17 @@ section .animate {
 .subtitle {
   width: 40%;
 }
+
+.project-img {
+  width: 100%;           
+  height: auto;          
+  object-fit: contain;   
+  border-radius: 8px;    
+  margin-bottom: 0.8rem;
+  background: #222;     
+  display: block;
+}
+
 
 
 
