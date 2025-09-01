@@ -15,7 +15,7 @@ Ho quindi creato una homepage con più schermi televisivi, ognuno cliccabile, pe
 - CSS3 (responsive + effetti glitch / glow)
 - JavaScript (vanilla)
 - SASS
-- [In fase di studio] Hosting statico su GitHub Pages
+- Hosting statico su GitHub Pages
 
 ## Funzionalità
 
