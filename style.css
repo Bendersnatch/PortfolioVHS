@@ -128,7 +128,7 @@ main .about-me {
 }
 
 .text-write {
-  font-size: 2em;
+  font-size: 1.5em;
   letter-spacing: 10px;
   font-family: "Quantico", sans-serif;
   width: 100%;
@@ -151,7 +151,7 @@ main .skills-section {
   color: #ede6eb;
   display: inline-block;
   max-width: 90%;
-  font-size: 16px;
+  font-size: 17px;
   padding: 1rem;
   background-color: rgba(164, 104, 191, 0.5);
   border: solid 1px red;
@@ -171,8 +171,8 @@ main .skills-section {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 20px;
-  font-size: 3rem;
+  padding: 18px;
+  font-size: 2.8rem;
   color: #fff;
   text-shadow: 0 0 5px #f5ebc5, 0 0 10px rgb(97, 34, 118), 0 0 20px rgb(183, 57, 143), 0 0 40px rgb(16, 46, 146);
   animation: flicker 2.5s infinite alternate;
@@ -185,7 +185,7 @@ main .skills-section {
   justify-items: center;
   gap: 1rem;
   text-align: right;
-  padding: 3rem;
+  padding: 2rem;
   color: white;
 }
 
@@ -193,11 +193,11 @@ main .skills-section {
   position: relative;
   display: flex;
   grid-row: 1;
-  bottom: 20%;
+  bottom: 30%;
   justify-content: center;
-  max-height: 90px;
+  max-height: 80px;
   width: 30%;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
@@ -257,24 +257,48 @@ input[type=checkbox] {
   font-weight: bold;
 }
 
-/*.home-button {
-  position: absolute;
+.contacts-button {
+  position: relative;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   z-index: 3;
   pointer-events: auto;
 }
 
-#btn-home {
-  bottom: 15%;
-  left: 15%;
-  font-size: 35px;
-  text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e, 0 0 40px #c50e0e;
+#btn-contattami {
+  font-size: 20px;
+  text-shadow: 0 0 5px #c50e0e,
+    0 0 10px #c50e0e,
+    0 0 20px #c50e0e,
+    0 0 40px #c50e0e;
   animation: flicker 2.9s infinite alternate;
-}*/
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: 0.8;
+  }
+
+  55% {
+    opacity: 0.3;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.9;
+  }
+}
+
 
 .mobile-menu a.active {
   text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff;
@@ -291,8 +315,8 @@ section {
 }
 
 #project-section {
-  margin-top: 0;            
-  padding-top: 2rem; 
+  margin-top: 0;
+  padding-top: 2rem;
 }
 
 
@@ -399,12 +423,12 @@ section .animate {
 }
 
 .project-img {
-  width: 100%;           
-  height: auto;          
-  object-fit: contain;   
-  border-radius: 8px;    
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
   margin-bottom: 0.8rem;
-  background: #222;     
+  background: #222;
   display: block;
 }
 
@@ -744,8 +768,35 @@ textarea:valid~label {
   font-size: 14px;
 }
 
-/* mobile contacts */
-@media (max-width: 1250px) {
+.home-button {
+  position: absolute;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+#btn-home {
+  bottom: 15%;
+  left: 15%;
+  font-size: 35px;
+  text-shadow: 0 0 5px #c50e0e, 0 0 10px #c50e0e, 0 0 20px #c50e0e, 0 0 40px #c50e0e;
+  animation: flicker 2.9s infinite alternate;
+}
+
+/* media query contacts */
+@media (max-width: 1024px) {
+  #btn-home {
+    bottom: 10%;
+    left: 5%;
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
   #btn-home {
     display: none;
   }
