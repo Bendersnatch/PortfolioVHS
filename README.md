@@ -1,7 +1,7 @@
 # PortfolioVHS
 
 Un portfolio web ispirato al design vaporwave.  
-About me, con una frase d'impatto alla fine che ti porta all'altra pagina del form.
+About me, una frase d'impatto alla fine che ti naviga alla pagina del form.
 
 ## Descrizione
 
